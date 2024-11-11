@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Android_Pract15_Parcelable</string>
+    <string name="edit_data">Перейти в другое окно</string>
+    <string name="species">Порода</string>
+    <string name="year">Год рождения</string>
+    <string name="month">Месяц рождения</string>
+    <string name="species_hint">Введите породу</string>
+    <string name="month_hint">Введите месяц рождения</string>
+    <string name="year_hint">Введите год рождения</string>
+    <string name="main_intro">Введите данные о животном</string>
+    <string name="month_input_error">Ошибка ввода месяца. Введите номер месяца (1–12).</string>
+    <string name="month_input_error_empty_field">Ошибка ввода месяца. Введено пустое поле.</string>
+    <string name="year_input_error_empty_field">Ошибка ввода года. Введено пустое поле.</string>
+    <string name="year_input_year_wrong_year">Ошибка при получении года. Введён неверный год.</string>
+    <string name="species_input_error_empty_field">Ошибка ввода породы. Введено пустое поле.</string>
+    <string name="input_error_empty_fields">Ошибка ввода. Заполните все поля.</string>
+</resources>
