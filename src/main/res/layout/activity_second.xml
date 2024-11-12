@@ -7,5 +7,93 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SecondActivity">
+  <Button
+      android:id="@+id/SecondActivityEditDataButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="64dp"
+      android:onClick="onClick"
+      android:text="@string/edit_data"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/SecondActivitySpeciesEditText" />
+
+  <TextView
+      android:id="@+id/SecondActivitySpeciesTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:text="@string/species"
+      app:layout_constraintStart_toStartOf="@+id/SecondActivityMonthEditText"
+      app:layout_constraintTop_toBottomOf="@+id/SecondActivityMonthEditText"
+      tools:ignore="MissingConstraints" />
+
+  <TextView
+      android:textSize="20dp"
+      android:textStyle="bold"
+      android:id="@+id/SecondActivityMainIntroTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="32dp"
+      android:text="@string/main_intro"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:ignore="MissingConstraints" />
+
+  <TextView
+      android:id="@+id/SecondActivityYearTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="-32dp"
+      android:layout_marginTop="16dp"
+      android:text="@string/year"
+      app:layout_constraintStart_toStartOf="@+id/SecondActivityMainIntroTextView"
+      app:layout_constraintTop_toBottomOf="@+id/SecondActivityMainIntroTextView" />
+
+  <TextView
+      android:id="@+id/SecondActivityMonthTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:text="@string/month"
+      app:layout_constraintStart_toStartOf="@+id/SecondActivityYearEditText"
+      app:layout_constraintTop_toBottomOf="@+id/SecondActivityYearEditText" />
+
+  <EditText
+      android:id="@+id/SecondActivitySpeciesEditText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:ems="10"
+      android:inputType="text"
+      android:hint="@string/species_hint"
+      app:layout_constraintStart_toStartOf="@+id/SecondActivitySpeciesTextView"
+      app:layout_constraintTop_toBottomOf="@+id/SecondActivitySpeciesTextView">
+  </EditText>
+
+
+  <EditText
+      android:id="@+id/SecondActivityYearEditText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:ems="10"
+      android:hint="@string/year_hint"
+      android:inputType="number"
+      app:layout_constraintStart_toStartOf="@+id/SecondActivityYearTextView"
+      app:layout_constraintTop_toBottomOf="@+id/SecondActivityYearTextView" />
+
+
+  <EditText
+      android:id="@+id/SecondActivityMonthEditText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:hint="@string/month_hint"
+      android:ems="10"
+      android:inputType="number"
+      app:layout_constraintStart_toStartOf="@+id/SecondActivityMonthTextView"
+      app:layout_constraintTop_toBottomOf="@+id/SecondActivityMonthTextView" />
 
   </androidx.constraintlayout.widget.ConstraintLayout>

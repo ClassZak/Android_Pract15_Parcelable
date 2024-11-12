@@ -11,6 +11,7 @@ class Animal(_species:String,_yearBorn:Short,_monthBorn:UByte):Parcelable{
         set(value){
             if(value <1U || value>12U)
                 throw Exception("Wrong month number")
+            field=value
         }
     init {
         species=_species
@@ -21,8 +22,8 @@ class Animal(_species:String,_yearBorn:Short,_monthBorn:UByte):Parcelable{
 
     constructor(parcel: Parcel) : this(
         parcel.readString().toString(),
-        parcel.readString().toString().toShort(),
-        parcel.readString().toString().toUByte()
+        parcel.readInt().toShort(),
+        parcel.readByte().toUByte()
     ) {
     }
 
@@ -30,7 +31,7 @@ class Animal(_species:String,_yearBorn:Short,_monthBorn:UByte):Parcelable{
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(species)
         parcel.writeInt(yearBorn.toInt())
-        parcel.writeInt(monthBorn.toInt())
+        parcel.writeByte(monthBorn.toByte())
     }
 
     override fun describeContents(): Int {

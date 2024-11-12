@@ -21,16 +21,27 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        getAnimalData()
+    }
+
+    fun getAnimalData(){
+        val arguments:Bundle? = intent.extras
+        if(arguments!=null){
+            val animal:Animal?=arguments.getParcelable("animal")as Animal?
+            if(animal!=null){
+                findViewById<EditText>(R.id.MainActivityYearEditText).setText(animal.yearBorn.toString())
+                findViewById<EditText>(R.id.MainActivityMonthEditText).setText(animal.monthBorn.toString())
+                findViewById<EditText>(R.id.MainActivitySpeciesEditText).setText(animal.species)
+            }
+        }
     }
 
     fun onClick(view: View):Unit{
-
-
         val speciesEditTextText=findViewById<EditText>(R.id.MainActivitySpeciesEditText).text.toString()
         val yearEditTextText=findViewById<EditText>(R.id.MainActivityYearEditText).text.toString()
         val monthEditTextText=findViewById<EditText>(R.id.MainActivityMonthEditText).text.toString()
 
-        var animal:Animal=Animal("",0,1U)
+        val animal:Animal=Animal("",0,1U)
 
         if(speciesEditTextText.length==0 && yearEditTextText.length==0 && monthEditTextText.length==0){
             val toast:Toast=Toast.makeText(this,R.string.input_error_empty_fields,Toast.LENGTH_SHORT)
